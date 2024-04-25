@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="images/logo.png" sizes="192x192" type="image/png">
+    <title>osu!merch - Login</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'exo.ttf', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(196, 96, 3);
+            color: #fff;
+            height: 75px;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            margin: 0 20px;
+        }
+
+        .logo-home {
+            background-image: url(images/logo-0.svg);
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+
+        .logo-home:hover {
+            transition: ease-in 100ms;
+            background-image: url(images/logo.png);
+        }
+
+        .nav-containersocial {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+
+        .nav-containersocial a {
+            margin-left: 15px;
+        }
+
+        .logo-twitter {
+            background-image: url(images/twitter.png);
+            background-size: contain;
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+
+        .avatar {
+            background-image: url(images/avatar.png);
+            background-size: contain;
+            width: 45px;
+            height: 45px;
+            display: block;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .avatar:hover {
+            border: 1px solid #fff;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .login-form {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-form button {
+            background-color: rgb(196, 96, 3);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: rgb(196, 96, 3);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-home">
+                <a href="index.html">
+                    <div class="logo-home"></div>
+                </a>
+            </div>
+            <div class="nav-cart">
+                <a href="cart.html"> cart </a>
+            </div>
+            <div class="nav-help">
+                <a href="help.html"> help </a>
+            </div>
+            <div class="nav-about">
+                <a href="about.html"> about </a>
+            </div>
+        </div>
+        <div class="nav-containersocial">
+            <div>
+                <a href="https://twitter.com/osusupport">
+                    <div class="logo-twitter"></div>
+                </a>
+            </div>
+            <a href="login.html"></a>
+                <div class="avatar"></div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <button onclick="redirectToIndex()">Login</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 osu!merch, ppy. All rights reserved.</p>
+        <nav>
+            <a href="tos.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </footer>
+
+    <script>
+        function redirectToIndex() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>
